@@ -19,6 +19,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: TermsText(terms: () {  }, policy: () {  },),
       resizeToAvoidBottomInset: false,
       body: Padding(
         padding: Dimensions.horizontalPadding,
@@ -32,19 +33,18 @@ class RegisterScreen extends StatelessWidget {
               subtitle: Text("There!", style: FontStyles.redTitleStyle,textAlign: TextAlign.left,),
             ),
             Dimensions.spacer15,
-            Text("Help us with a few details about you. We promise, \n we will not spam you :-)", style: FontStyles.bodyStyle,),
+            Text("Help us with a few details about you. We promise, \n we will not spam you :-)", style: FontStyles.authTextStyle,),
             Dimensions.spacer40,
             Text(controller.emailController.text.isNotEmpty ? controller.emailController.text : "user.email@company.com", style: TextStyle(fontSize: 12, color: SysColor.tileColor, fontWeight: FontWeight.bold),),
             Dimensions.spacer110,
-            TextInput(labelText: "Company Name", leadingIcon: Icons.factory_outlined, controller: controller.companyNameController,),
+            TextInput(labelText: "Company Name", leadingIcon: Paths.storesIcon, controller: controller.companyNameController,),
             Dimensions.spacer15,
-            TextInput(labelText: "Full Name", leadingIcon: Icons.person_outlined, controller: controller.nameController,),
+            TextInput(labelText: "Full Name", leadingIcon: Paths.personIcon, controller: controller.nameController,),
             Dimensions.spacer15,
-            TextInput(labelText: "Mobile Number", leadingIcon: Icons.phone_android_outlined, controller: controller.phoneNumberController,),
+            TextInput(labelText: "Mobile Number", leadingIcon: Paths.phoneIcon, controller: controller.phoneNumberController,),
             Dimensions.spacer85,
             SubmitButton(title: "Proceed", onTap: (){Get.to(()=>OTPScreen(), transition: Transition.fadeIn);},),
             Dimensions.spacer25,
-            TermsText(terms: (){}, policy: (){})
           ],
         ),
       ),

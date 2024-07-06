@@ -29,13 +29,39 @@ class FontStyles{
     fontFamily: "Montserrat",
     fontSize: 14.0,
     fontWeight: FontWeight.w500,
-    color: SysColor.secBackColor
+    color: SysColor.tileColor
   );
   static TextStyle bodyStyle = TextStyle(
     fontFamily: "Montserrat",
     fontSize: 12.0,
     fontWeight: FontWeight.w500,
   );
+  static TextStyle authTextStyle = TextStyle(
+    fontFamily: "Montserrat",
+    fontSize: 12.0,
+    fontWeight: FontWeight.w500,
+    color: Color(0xFFA9A9A9)
+  );
+}
+
+/********************* Paths ********************/
+class Paths{
+  static String msgIcon = "assets/Icons/msg.svg";
+  static String addIcon = "assets/Icons/Add.svg";
+  static String homeIcon = "assets/Icons/Home.svg";
+  static String financeIcon = "assets/Icons/Finance.svg";
+  static String moreIcon = "assets/Icons/More.svg";
+  static String personIcon = "assets/Icons/person.svg";
+  static String salesIcon = "assets/Icons/sales.svg";
+  static String storesIcon = "assets/Icons/store.svg";
+  static String mailIcon = "assets/Icons/Mail.svg";
+  static String phoneIcon = "assets/Icons/Phone.svg";
+  static String notificationIcon = "assets/Icons/notifications_unread.svg";
+  static String arrowIcon = "assets/Icons/arrow.svg";
+  static String locationIcon = "assets/Icons/Location.svg";
+  static String salesTeamIcon = "assets/Icons/sales_team.svg";
+  static String taskIcon = "assets/Icons/Task.svg";
+  static String prospectsIcon = "assets/Icons/Prospects.svg";
 }
 
 class Dimensions{

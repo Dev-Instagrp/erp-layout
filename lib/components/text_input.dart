@@ -1,15 +1,15 @@
-import 'dart:ui';
-
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class TextInput extends StatelessWidget {
   final String labelText;
-  final IconData leadingIcon;
+  final String leadingIcon;
   final TextEditingController controller;
 
   TextInput({super.key, required this.labelText, required this.leadingIcon, required this.controller});
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +17,14 @@ class TextInput extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         labelText: labelText,
+        labelStyle: FontStyles.authTextStyle,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimensions.widgetRadius),
           borderSide: BorderSide(
-            color: SysColor.secBackColor,
+            color: SysColor.highlightColor,
           )
         ),
-        prefixIcon: Icon(leadingIcon, color: SysColor.secBackColor, size: Dimensions.iconDimension,)
+        prefixIcon: SvgPicture.asset(leadingIcon, fit: BoxFit.scaleDown, height: Dimensions.iconDimension, width: Dimensions.iconDimension,)
       ),
     );
   }
