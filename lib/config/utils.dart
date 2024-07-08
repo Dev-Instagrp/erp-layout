@@ -62,6 +62,8 @@ class Paths{
   static String salesTeamIcon = "assets/Icons/sales_team.svg";
   static String taskIcon = "assets/Icons/Task.svg";
   static String prospectsIcon = "assets/Icons/Prospects.svg";
+  static String sortIcon = "assets/Icons/sort.svg";
+  static String graphIcon = "assets/Icons/graph.svg";
 }
 
 class Dimensions{

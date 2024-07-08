@@ -1,8 +1,8 @@
+import 'dart:convert';
 import 'dart:math';
-
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-
+import 'package:http/http.dart' as http;
 import '../config/colors.dart';
 import '../config/utils.dart';
 
@@ -11,6 +11,19 @@ class CommonController extends GetxController{
   var isUnread = true.obs;
   var currentIndex = 0.obs;
   var userName = "John".obs;
+  var quickActions = [].obs;
+  var recentContacts = [].obs;
+  var recentRecordings = [].obs;var clientRecords = <Map<String, String>>[].obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    fetchUserName();
+    fetchRecentContacts();
+    fetchRecentRecordings();
+    fetchClientRecords();
+    addMockData();
+  }
 
 
 
@@ -36,5 +49,49 @@ class CommonController extends GetxController{
       "$first$second",
       style: FontStyles.subTitleStyle.copyWith(color: Colors.white, fontSize: 18),
     );
+  }
+
+  void fetchUserName() async {
+    final response = await http.get(Uri.parse(''));
+    if (response.statusCode == 200) {
+      userName.value = jsonDecode(response.body)['name'];
+    } else {
+      // Handle error
+    }
+  }
+
+  void fetchRecentContacts() async {
+    final response = await http.get(Uri.parse(''));
+    if (response.statusCode == 200) {
+      recentContacts.value = jsonDecode(response.body);
+    } else {
+      // Handle error
+    }
+  }
+
+  void fetchRecentRecordings() async {
+    final response = await http.get(Uri.parse(''));
+    if (response.statusCode == 200) {
+      recentRecordings.value = jsonDecode(response.body);
+    } else {
+      // Handle error
+    }
+  }
+
+  void fetchClientRecords() async {
+    final response = await http.get(Uri.parse(''));
+    if (response.statusCode == 200) {
+      clientRecords.value = jsonDecode(response.body);
+    } else {
+      // Handle error
+    }
+  }
+
+  void addMockData() {
+    clientRecords.value = [
+      {"Name": "James", "Time": "09:45", "Location": "Lorem", "Message": "Lorem", "Cost": "500"},
+      {"Name": "Anna", "Time": "10:15", "Location": "Ipsum", "Message": "Ipsum", "Cost": "300"},
+      {"Name": "John", "Time": "11:30", "Location": "Dolor", "Message": "Dolor", "Cost": "450"},
+    ];
   }
 }
