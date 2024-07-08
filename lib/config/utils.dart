@@ -46,6 +46,9 @@ class FontStyles{
 
 /********************* Paths ********************/
 class Paths{
+
+  static String apiKey = "AIzaSyAhLRwcdflWVKGfSc8zD81I4vOnS0xbFZ0";
+
   static String msgIcon = "assets/Icons/msg.svg";
   static String addIcon = "assets/Icons/Add.svg";
   static String homeIcon = "assets/Icons/Home.svg";

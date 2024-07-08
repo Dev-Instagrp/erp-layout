@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:table_calendar/table_calendar.dart';
 import '../config/colors.dart';
 import '../config/utils.dart';
 
@@ -19,7 +20,7 @@ class CommonController extends GetxController{
   var selectedDate = DateTime.now().obs;
   var month = ''.obs;
   var day = ''.obs;
-  List<String> months = ['', '', 'Jan', 'Feb', 'March', 'April', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+  List<String> months = ['', 'Jan', 'Feb', 'March', 'April', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
   List<String> days = ['', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
 
   @override
@@ -52,25 +53,18 @@ class CommonController extends GetxController{
       builder: (BuildContext context, Widget? child) {
         return Theme(
           data: ThemeData.light().copyWith(
-            primaryColor: SysColor.tileColor,
-            colorScheme: ColorScheme.light(primary: SysColor.tileColor),
-            buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary),
+            primaryColor: SysColor.buttonColor,
+            colorScheme: ColorScheme.light(primary: SysColor.buttonColor),
+            buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary,),
           ),
           child: child!,
         );
       },
     );
 
-    if (pickedDate != null && pickedDate != selectedDate)
+    if (pickedDate != null && pickedDate != selectedDate.value) {
       selectedDate.value = pickedDate;
-    print(selectedDate.value);
-    print(selectedDate.value.weekday);
-    print(selectedDate.value.month);
-    day.value = days[selectedDate.value.weekday];
-    month.value = months[selectedDate.value.month];
-    print(selectedDate.value);
-    print(month.value);
-    print(day.value);
+    }
   }
 
   Color getRandomColor() {
