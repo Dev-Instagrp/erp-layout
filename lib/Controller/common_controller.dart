@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import '../config/colors.dart';
 import '../config/utils.dart';
@@ -13,7 +13,14 @@ class CommonController extends GetxController{
   var userName = "John".obs;
   var quickActions = [].obs;
   var recentContacts = [].obs;
-  var recentRecordings = [].obs;var clientRecords = <Map<String, String>>[].obs;
+  var recentRecordings = [].obs;
+  var clientRecords = <Map<String, String>>[].obs;
+  var salesTeam = [].obs;
+  var selectedDate = DateTime.now().obs;
+  var month = ''.obs;
+  var day = ''.obs;
+  List<String> months = ['', '', 'Jan', 'Feb', 'March', 'April', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+  List<String> days = ['', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
 
   @override
   void onInit() {
@@ -23,12 +30,47 @@ class CommonController extends GetxController{
     fetchRecentRecordings();
     fetchClientRecords();
     addMockData();
+    fetchSalesTeam();
+    selectedDate.value = DateTime.now();
+    day.value = days[selectedDate.value.weekday];
+    month.value = months[selectedDate.value.month];
   }
 
 
 
   void changePage(int index) {
     currentIndex.value = index;
+  }
+
+
+  Future<void> showDate(BuildContext context) async {
+    final DateTime? pickedDate = await showDatePicker(
+      context: context,
+      initialDate: selectedDate.value,
+      firstDate: DateTime(2020),
+      lastDate: DateTime(2030),
+      builder: (BuildContext context, Widget? child) {
+        return Theme(
+          data: ThemeData.light().copyWith(
+            primaryColor: SysColor.tileColor,
+            colorScheme: ColorScheme.light(primary: SysColor.tileColor),
+            buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary),
+          ),
+          child: child!,
+        );
+      },
+    );
+
+    if (pickedDate != null && pickedDate != selectedDate)
+      selectedDate.value = pickedDate;
+    print(selectedDate.value);
+    print(selectedDate.value.weekday);
+    print(selectedDate.value.month);
+    day.value = days[selectedDate.value.weekday];
+    month.value = months[selectedDate.value.month];
+    print(selectedDate.value);
+    print(month.value);
+    print(day.value);
   }
 
   Color getRandomColor() {
@@ -93,5 +135,14 @@ class CommonController extends GetxController{
       {"Name": "Anna", "Time": "10:15", "Location": "Ipsum", "Message": "Ipsum", "Cost": "300"},
       {"Name": "John", "Time": "11:30", "Location": "Dolor", "Message": "Dolor", "Cost": "450"},
     ];
+  }
+
+  void fetchSalesTeam() async {
+    final response = await http.get(Uri.parse('YOUR_API_URL'));
+    if (response.statusCode == 200) {
+      salesTeam.value = jsonDecode(response.body);
+    } else {
+      // Handle error
+    }
   }
 }

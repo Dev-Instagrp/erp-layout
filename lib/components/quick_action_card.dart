@@ -1,4 +1,5 @@
 import 'package:erp_layout/Controller/common_controller.dart';
+import 'package:erp_layout/View/sales_team.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class QuickActionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){Get.to(()=>destination, transition: Transition.fadeIn);},
+      onTap: (){Get.to(destination, transition: Transition.fadeIn);},
       borderRadius: BorderRadius.circular(5),
       child: Container(
         height: 90,

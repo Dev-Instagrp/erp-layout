@@ -6,4 +6,5 @@ class SysColor{
  static Color buttonColor = Color(0xFFED4487);
  static Color secBackColor = Color(0xFFCACFD6);
  static Color highlightColor = Color(0xFFDCD6F7);
+ static Color greyColor = Color(0xFFF3F3F3);
 }

@@ -1,5 +1,9 @@
 import 'package:erp_layout/Controller/common_controller.dart';
 import 'package:erp_layout/View/home_screen.dart';
+import 'package:erp_layout/View/locations.dart';
+import 'package:erp_layout/View/prospects.dart';
+import 'package:erp_layout/View/sales_team.dart';
+import 'package:erp_layout/View/tasks.dart';
 import 'package:erp_layout/components/chart.dart';
 import 'package:erp_layout/components/client_record_table.dart';
 import 'package:erp_layout/components/graph_type_selector.dart';
@@ -38,17 +42,17 @@ class Home extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              QuickActionCard(title: "Sales Team", destination: HomeScreen(), icon: Paths.salesTeamIcon),
-              QuickActionCard(title: "Location", destination: HomeScreen(), icon: Paths.locationIcon),
-              QuickActionCard(title: "Prospects", destination: HomeScreen(), icon: Paths.prospectsIcon),
-              QuickActionCard(title: "Task", destination: HomeScreen(), icon: Paths.taskIcon),
+              QuickActionCard(title: "Sales Team", destination: SalesTeam(), icon: Paths.salesTeamIcon),
+              QuickActionCard(title: "Location", destination: Locations(), icon: Paths.locationIcon),
+              QuickActionCard(title: "Prospects", destination: Prospects(), icon: Paths.prospectsIcon),
+              QuickActionCard(title: "Task", destination: Tasks(), icon: Paths.taskIcon),
             ],
           ),
           Dimensions.spacer40,
           TitleText(title: "Recent Contacts", destination: Home(),),
           Dimensions.spacer15,
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 17, vertical: 17),
+            padding: EdgeInsets.symmetric(vertical: 10),
             decoration: BoxDecoration(
                 border: Border.all(
                   color: SysColor.highlightColor,
@@ -58,6 +62,7 @@ class Home extends StatelessWidget {
                 color: Colors.transparent
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               /******API Integrations Code************/
               // children: controller.recentContacts.map((contact) {
               //   return RecentContactCard(

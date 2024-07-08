@@ -64,6 +64,13 @@ class Paths{
   static String prospectsIcon = "assets/Icons/Prospects.svg";
   static String sortIcon = "assets/Icons/sort.svg";
   static String graphIcon = "assets/Icons/graph.svg";
+  static String searchIcon = "assets/Icons/search.svg";
+  static String dotsIcon = "assets/Icons/three_dots.svg";
+  static String editIcon = "assets/Icons/Edit.svg";
+  static String deleteIcon = "assets/Icons/Delete.svg";
+  static String callIcon = "assets/Icons/call.svg";
+  static String activityIcon = "assets/Icons/activity.svg";
+  static String moreHorizontalIcon = "assets/Icons/DotsThree.svg";
 }
 
 class Dimensions{
