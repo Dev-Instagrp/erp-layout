@@ -74,6 +74,7 @@ class Paths{
   static String callIcon = "assets/Icons/call.svg";
   static String activityIcon = "assets/Icons/activity.svg";
   static String moreHorizontalIcon = "assets/Icons/DotsThree.svg";
+  static String userPlusIcon = "assets/Icons/UserPlus.svg";
 }
 
 class Dimensions{
@@ -104,4 +105,6 @@ class Dimensions{
   static SizedBox get spacer110 => SizedBox(height: MediaQuery.of(Get.context!).size.height * 0.13);
   static SizedBox get spacer145 => SizedBox(height: MediaQuery.of(Get.context!).size.height * 0.17);
   static SizedBox get spacer25 => SizedBox(height: MediaQuery.of(Get.context!).size.height * 0.025);
+  static SizedBox get spacer30 => SizedBox(height: MediaQuery.of(Get.context!).size.height * 0.03);
+
 }

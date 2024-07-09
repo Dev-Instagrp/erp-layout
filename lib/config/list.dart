@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../View/home.dart';
+import '../View/HomePages/home.dart';
 
 
 class ListsUtils{
@@ -14,32 +14,39 @@ class ListsUtils{
     {
       "imageUrl": "",
       "name": "Haily Barajas",
-      "email": "h.barajas@xyz.com"
+      "email": "h.barajas@xyz.com",
+      "phoneNumber": "123-456-7890"
     },
     {
       "imageUrl": "",
       "name": "Chaman Maes",
-      "email": "cmaes2@gd.com"
+      "email": "cmaes2@gd.com",
+      "phoneNumber": "123-456-7891"
     },
     {
       "imageUrl": "",
       "name": "Fairfax Hanlon",
-      "email": "f.hanlon@dhdg.com"
+      "email": "f.hanlon@dhdg.com",
+      "phoneNumber": "123-456-7892"
     },
     {
       "imageUrl": "",
       "name": "Alex Robb",
-      "email": "alex.@hdh.com"
+      "email": "alex.@hdh.com",
+      "phoneNumber": "123-456-7893"
     },
     {
       "imageUrl": "",
       "name": "Cameron Williamson",
-      "email": "cameronwi11@hgd.com"
+      "email": "cameronwi11@hgd.com",
+      "phoneNumber": "123-456-7894"
     },
     {
       "imageUrl": "",
       "name": "Thoms Teagu",
-      "email": "thoms@hgd.com"
+      "email": "thoms@hgd.com",
+      "phoneNumber": "123-456-7895"
     }
   ];
+
 }

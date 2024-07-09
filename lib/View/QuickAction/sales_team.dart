@@ -1,13 +1,13 @@
 import 'package:erp_layout/Controller/common_controller.dart';
-import 'package:erp_layout/components/other_app_bar.dart';
-import 'package:erp_layout/components/sales_team_tile.dart';
+import 'package:erp_layout/components/AppBars/other_app_bar.dart';
+import 'package:erp_layout/components/ListTiles/sales_team_tile.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/list.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'home_screen.dart';
+import '../home_screen.dart';
 
 class SalesTeam extends StatelessWidget {
   SalesTeam({super.key});

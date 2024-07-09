@@ -1,7 +1,7 @@
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
 
-import '../config/colors.dart';
+import '../../config/colors.dart';
 
 class TermsText extends StatelessWidget {
   final VoidCallback terms;

@@ -3,7 +3,7 @@ import 'package:erp_layout/Controller/common_controller.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../config/utils.dart';
+import '../../config/utils.dart';
 
 class RecordingCard extends StatelessWidget {
   final String name;

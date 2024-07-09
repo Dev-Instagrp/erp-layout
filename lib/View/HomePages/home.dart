@@ -1,20 +1,20 @@
 import 'package:erp_layout/Controller/common_controller.dart';
 import 'package:erp_layout/View/home_screen.dart';
-import 'package:erp_layout/View/locations.dart';
-import 'package:erp_layout/View/prospects.dart';
-import 'package:erp_layout/View/sales_team.dart';
-import 'package:erp_layout/View/tasks.dart';
+import 'package:erp_layout/View/QuickAction/locations.dart';
+import 'package:erp_layout/View/QuickAction/prospects.dart';
+import 'package:erp_layout/View/QuickAction/sales_team.dart';
+import 'package:erp_layout/View/QuickAction/tasks.dart';
 import 'package:erp_layout/components/chart.dart';
 import 'package:erp_layout/components/client_record_table.dart';
-import 'package:erp_layout/components/graph_type_selector.dart';
-import 'package:erp_layout/components/quick_action_card.dart';
-import 'package:erp_layout/components/recent_contact_card.dart';
-import 'package:erp_layout/components/recording_card.dart';
+import 'package:erp_layout/components/Buttons/graph_type_selector.dart';
+import 'package:erp_layout/components/Cards/quick_action_card.dart';
+import 'package:erp_layout/components/Cards/recent_contact_card.dart';
+import 'package:erp_layout/components/Cards/recording_card.dart';
 import 'package:erp_layout/components/title_text.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../config/colors.dart';
+import '../../config/colors.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});

@@ -1,7 +1,7 @@
 import 'package:erp_layout/Controller/auth_controller.dart';
 import 'package:erp_layout/View/home_screen.dart';
-import 'package:erp_layout/components/submit_button.dart';
-import 'package:erp_layout/components/terms_text.dart';
+import 'package:erp_layout/components/Buttons/submit_button.dart';
+import 'package:erp_layout/components/BottomElements/terms_text.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +54,8 @@ class OTPScreen extends StatelessWidget {
               length: 4,
               defaultPinTheme: defaultPinTheme,
               focusedPinTheme: defaultPinTheme.copyWith(
+                height: 35,
+                width: 35,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: SysColor.tileColor

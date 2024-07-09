@@ -1,4 +1,4 @@
-import 'package:erp_layout/View/ask_me_anything.dart';
+import 'package:erp_layout/View/DetailsAndProfiles/ask_me_anything.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';

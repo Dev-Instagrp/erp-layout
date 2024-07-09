@@ -1,6 +1,6 @@
 import 'package:erp_layout/Controller/common_controller.dart';
-import 'package:erp_layout/components/app_bar.dart';
-import 'package:erp_layout/components/bottom_navigation_bar.dart';
+import 'package:erp_layout/components/AppBars/app_bar.dart';
+import 'package:erp_layout/components/BottomElements/bottom_navigation_bar.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/list.dart';
 import 'package:flutter/material.dart';

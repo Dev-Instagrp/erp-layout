@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:table_calendar/table_calendar.dart';
 import '../config/colors.dart';
 import '../config/utils.dart';
 
@@ -132,7 +131,7 @@ class CommonController extends GetxController{
   }
 
   void fetchSalesTeam() async {
-    final response = await http.get(Uri.parse('YOUR_API_URL'));
+    final response = await http.get(Uri.parse(''));
     if (response.statusCode == 200) {
       salesTeam.value = jsonDecode(response.body);
     } else {
