@@ -1,5 +1,4 @@
 import 'package:erp_layout/Controller/auth_controller.dart';
-import 'package:erp_layout/View/Authentication/otp_screen.dart';
 import 'package:erp_layout/components/Buttons/submit_button.dart';
 import 'package:erp_layout/components/BottomElements/terms_text.dart';
 import 'package:erp_layout/config/utils.dart';
@@ -7,8 +6,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../components/TextInputs/text_input.dart';
-import '../../config/colors.dart';
+import '../../../components/TextInputs/text_input.dart';
+import '../../../config/colors.dart';
+import 'otp_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});

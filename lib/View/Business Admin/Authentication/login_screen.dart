@@ -1,13 +1,13 @@
 import 'package:erp_layout/Controller/auth_controller.dart';
-import 'package:erp_layout/View/Authentication/registeration_screen.dart';
+import 'package:erp_layout/View/Business%20Admin/Authentication/registeration_screen.dart';
 import 'package:erp_layout/components/Buttons/submit_button.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../components/BottomElements/terms_text.dart';
-import '../../components/TextInputs/text_input.dart';
+import '../../../components/BottomElements/terms_text.dart';
+import '../../../components/TextInputs/text_input.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});

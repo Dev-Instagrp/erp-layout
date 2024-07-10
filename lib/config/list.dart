@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../View/HomePages/home.dart';
+import '../View/Business Admin/HomePages/home.dart';
 
 
 class ListsUtils{
@@ -14,8 +14,8 @@ class ListsUtils{
     {
       "imageUrl": "",
       "name": "Haily Barajas",
-      "email": "h.barajas@xyz.com",
-      "phoneNumber": "123-456-7890"
+      "eeNmail": "h.barajas@xyz.com",
+      "phonumber": "123-456-7890"
     },
     {
       "imageUrl": "",

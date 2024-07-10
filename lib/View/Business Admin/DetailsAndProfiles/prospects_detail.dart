@@ -1,13 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:erp_layout/Controller/activities_controller.dart';
 import 'package:erp_layout/Controller/common_controller.dart';
-import 'package:erp_layout/View/QuickAction/prospects.dart';
+import 'package:erp_layout/components/Buttons/submit_button.dart';
 import 'package:erp_layout/components/TextInputs/disabled_text_view.dart';
+import 'package:erp_layout/components/TextInputs/text_input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import '../../config/colors.dart';
-import '../../config/utils.dart';
+
+import '../../../config/colors.dart';
+import '../../../config/utils.dart';
+import '../QuickAction/prospects.dart';
 
 class ProspectsDetail extends StatelessWidget {
   final Map<String, dynamic> data;
@@ -103,12 +106,28 @@ class ProspectsDetail extends StatelessWidget {
   }
 
   Widget Form(){
-    return ListView(
-      children: [
-        TextFormField(
-
-        )
-      ],
+    return Padding(
+      padding: Dimensions.horizontalPadding,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Dimensions.spacer25,
+          Text("Edit Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: SysColor.tileColor),),
+          Dimensions.spacer25,
+          Divider(color: SysColor.secBackColor,),
+          Dimensions.spacer40,
+          Dimensions.spacer25,
+          TextInput(labelText: data['name'], leadingIcon: Paths.personIcon, controller: activityController.firstNameController),
+          Dimensions.spacer25,
+          TextInput(labelText: data['name'], leadingIcon: Paths.personIcon, controller: activityController.lastNameController),
+          Dimensions.spacer25,
+          TextInput(labelText: data['email'], leadingIcon: Paths.mailIcon, controller: activityController.lastNameController),
+          Dimensions.spacer25,
+          TextInput(labelText: data['phoneNumber'], leadingIcon: Paths.callIcon, controller: activityController.lastNameController),
+          SizedBox(height: 110,),
+          SubmitButton(onTap: (){}, title: "Save")
+        ],
+      ),
     );
   }
 }

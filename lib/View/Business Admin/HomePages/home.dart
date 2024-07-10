@@ -1,9 +1,4 @@
 import 'package:erp_layout/Controller/common_controller.dart';
-import 'package:erp_layout/View/home_screen.dart';
-import 'package:erp_layout/View/QuickAction/locations.dart';
-import 'package:erp_layout/View/QuickAction/prospects.dart';
-import 'package:erp_layout/View/QuickAction/sales_team.dart';
-import 'package:erp_layout/View/QuickAction/tasks.dart';
 import 'package:erp_layout/components/chart.dart';
 import 'package:erp_layout/components/client_record_table.dart';
 import 'package:erp_layout/components/Buttons/graph_type_selector.dart';
@@ -14,7 +9,11 @@ import 'package:erp_layout/components/title_text.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../config/colors.dart';
+import '../../../config/colors.dart';
+import '../QuickAction/locations.dart';
+import '../QuickAction/prospects.dart';
+import '../QuickAction/sales_team.dart';
+import '../QuickAction/tasks.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});

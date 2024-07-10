@@ -5,7 +5,7 @@ import 'package:erp_layout/components/ListTiles/prospects_tile.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../config/list.dart';
+import '../../../config/list.dart';
 
 class Prospects extends StatelessWidget {
   Prospects({super.key});

@@ -1,12 +1,12 @@
 import 'package:erp_layout/Controller/common_controller.dart';
-import 'package:erp_layout/View/QuickAction/sales_team.dart';
 import 'package:erp_layout/components/new_prospects.dart';
 import 'package:erp_layout/components/profile_main_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import '../../config/colors.dart';
-import '../../config/utils.dart';
+import '../../../config/colors.dart';
+import '../../../config/utils.dart';
+import '../QuickAction/sales_team.dart';
 
 class SalesTeamProfile extends StatelessWidget {
   final Map<String, dynamic> data;
@@ -109,6 +109,17 @@ class SalesTeamProfile extends StatelessWidget {
                   fontSize: 12,
                   fontWeight: FontWeight.bold),
             ),
+            Dimensions.spacer15,
+            InkWell(
+              onTap: (){},
+              child: Container(
+                height: 135,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: SysColor.highlightColor, width: 1)
+                ),
+              ),
+            )
           ],
         ),
       ),

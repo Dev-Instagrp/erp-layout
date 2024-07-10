@@ -1,7 +1,7 @@
-import 'package:erp_layout/View/Authentication/login_screen.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'View/Business Admin/Authentication/login_screen.dart';
 
 void main(){
   runApp(MyApp());

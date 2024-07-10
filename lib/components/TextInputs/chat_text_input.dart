@@ -1,9 +1,10 @@
-import 'package:erp_layout/View/DetailsAndProfiles/ask_me_anything.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+
+import '../../View/Business Admin/DetailsAndProfiles/ask_me_anything.dart';
 
 class ChatTextInput extends StatelessWidget {
   final String labelText;

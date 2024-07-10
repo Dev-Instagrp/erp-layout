@@ -1,12 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:erp_layout/Controller/common_controller.dart';
-import 'package:erp_layout/View/DetailsAndProfiles/sales_team_profile.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+
+import '../../View/Business Admin/DetailsAndProfiles/sales_team_profile.dart';
 
 class SalesTeamTile extends StatelessWidget {
   final Map<String, dynamic> data;

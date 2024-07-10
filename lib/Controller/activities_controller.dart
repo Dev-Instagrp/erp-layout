@@ -15,10 +15,11 @@ class ActivitiesController extends GetxController{
   void showBottomForm(BuildContext context, Map<String, dynamic> data, Widget content){
     showModalBottomSheet(
       backgroundColor: Colors.transparent,
+        isScrollControlled: true,
         context: context,
         builder: (context){
       return Container(
-        height: 700,
+        height: 600,
         width: MediaQuery.of(context).size.width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -33,6 +34,7 @@ class ActivitiesController extends GetxController{
             Dimensions.spacer30,
             Expanded(
                 child: Container(
+                  alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topRight: Radius.circular(25), topLeft: Radius.circular(25)

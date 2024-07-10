@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:erp_layout/Controller/common_controller.dart';
-import 'package:erp_layout/View/DetailsAndProfiles/prospects_detail.dart';
+import 'package:erp_layout/View/Business%20Admin/DetailsAndProfiles/prospects_detail.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';

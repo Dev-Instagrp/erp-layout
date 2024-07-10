@@ -1,5 +1,4 @@
 import 'package:erp_layout/Controller/common_controller.dart';
-import 'package:erp_layout/View/QuickAction/sales_team.dart';
 import 'package:erp_layout/config/colors.dart';
 import 'package:erp_layout/config/utils.dart';
 import 'package:flutter/material.dart';
